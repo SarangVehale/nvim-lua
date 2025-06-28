@@ -25,4 +25,6 @@ require('core.options')
 require('core.keymaps')
 
 -- Load plugins
-require('lazy').setup('plugins')
+-- The line below is the corrected one.
+-- It now loads the table returned by `lua/plugins/init.lua`
+require('lazy').setup(require('plugins'))
