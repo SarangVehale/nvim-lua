@@ -4,8 +4,7 @@ This is a modern, Lua-based Neovim configuration designed to function as a light
 
 It uses `lazy.nvim` for package management, ensuring that plugins are loaded efficiently.
 
-
-*(This is a representative image of a similar setup. Your dashboard and theme will look slightly different but follow the same principles.)*
+![neovim-config](~/.config/nvim/neovim.png)
 
 ## Features
 
