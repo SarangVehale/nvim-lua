@@ -29,15 +29,26 @@ return {
   -- Keymap helper
   { 'folke/which-key.nvim', config = function() require('plugins.which-key') end },
 
-  -- LSP, Autocompletion
+  -- =======================================================================
+  -- LSP AND AUTOCOMPLETION SECTION (UPDATED)
+  -- =======================================================================
+
+  -- Mason: To install LSPs, Linters, and Formatters
+  {
+    'williamboman/mason.nvim',
+    config = function()
+      require('mason').setup()
+    end,
+  },
+
+  -- lsp-zero: To simplify LSP configuration
   {
     'VonHeikemen/lsp-zero.nvim',
     branch = 'v3.x',
     dependencies = {
       -- LSP Support
       { 'neovim/nvim-lspconfig' },
-      { 'williamboman/mason.nvim' },
-      { 'williamboman/mason-lspconfig.nvim' },
+      { 'williamboman/mason-lspconfig.nvim' }, -- Bridge between mason and lspconfig
 
       -- Autocompletion
       { 'hrsh7th/nvim-cmp' },
@@ -45,6 +56,7 @@ return {
       { 'L3MON4D3/LuaSnip' },
     },
     config = function()
+      -- This is the same lsp.lua file as before
       require('plugins.lsp')
     end,
   },
