@@ -4,7 +4,7 @@ This is a modern, Lua-based Neovim configuration designed to function as a light
 
 It uses `lazy.nvim` for package management, ensuring that plugins are loaded efficiently.
 
-![neovim-config](~/./neovim.png)
+![neovim-config](images/neovim.png)
 
 ## Features
 
